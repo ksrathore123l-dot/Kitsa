@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Happy Birthday ❤️ | For My Special Person</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body style="overflow-y: hidden;">
+    <!-- =========================================
+         DOB GATE
+    ========================================== -->
+    <div class="dob-overlay" id="dobOverlay">
+      <div class="dob-card">
+        <div class="lock-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <h2 class="dob-title">Happy Birthday</h2>
+        <p class="dob-subtitle">to my favourite person <span class="heart-icon">❤️</span></p>
+        <p class="dob-instruction">ENTER YOUR BIRTH DATE</p>
+        
+        <form id="dobForm" class="code-inputs">
+          <input type="text" maxlength="1" class="code-box" required placeholder="D" />
+          <input type="text" maxlength="1" class="code-box" required placeholder="D" />
+          <input type="text" maxlength="1" class="code-box" required placeholder="M"/>
+          <input type="text" maxlength="1" class="code-box" required placeholder="M"/>
+          <input type="text" maxlength="1" class="code-box" required placeholder="Y"/>
+          <input type="text" maxlength="1" class="code-box" required placeholder="Y"/>
+          <input type="text" maxlength="1" class="code-box" required placeholder="Y"/>
+          <input type="text" maxlength="1" class="code-box" required placeholder="Y"/>
+        </form>
+        <p id="dobError" style="color: red; font-size: 14px; display: none; margin-top: 10px;">Incorrect date! Try again.</p>
+
+        <div class="dob-decorations">
+          <span>♥</span><span class="star">✦</span><span>♥</span>
+        </div>
+      </div>
+    </div>
+    <!-- =========================================
+         BACKGROUND EFFECTS
+    ========================================== -->
+
+    <div class="bg-glow glow-one"></div>
+    <div class="bg-glow glow-two"></div>
+
+    <div class="floating-hearts">
+      <span>❤</span>
+      <span>♡</span>
+      <span>❤</span>
+      <span>♡</span>
+      <span>❤</span>
+      <span>♡</span>
+      <span>❤</span>
+      <span>♡</span>
+    </div>
+
+    <div class="sparkles">
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+      <a href="#home" class="logo">
+        <span class="logo-heart">♥</span>
+        For You
+        <small>❤</small>
+      </a>
+
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#message">Message</a>
+        <a href="#wishes">Wishes</a>
+        <a href="#surprise">Surprise</a>
+      </nav>
+
+      <button class="special-btn">
+        <span>♥</span>
+        You Are Special
+      </button>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </header>
+
+    <!-- =========================================
+         MOBILE MENU
+    ========================================== -->
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#message">Message</a>
+      <a href="#wishes">Wishes</a>
+      <a href="#surprise">Surprise</a>
+    </div>
+
+    <!-- =========================================
+         HERO SECTION
+    ========================================== -->
+
+    <main>
+      <section class="hero" id="home">
+        <!-- Decorative Balloons -->
+
+        <div class="balloon balloon-left">
+          <span>Stay<br />Happy</span>
+        </div>
+
+        <div class="balloon balloon-top">
+          <span>You Are<br />Special</span>
+        </div>
+
+        <div class="balloon balloon-right">
+          <span>Always<br />Shine</span>
+        </div>
+
+        <!-- Left Character / Cake Area -->
+
+        <div class="hero-visual" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 600px;">
+          <!-- Main Character Image -->
+          <img src="image/kitsa.png" alt="Cute character" style="position: relative; z-index: 1; max-width: 100%; height: auto; max-height: 450px; animation: floatImage 6s ease-in-out infinite; filter: drop-shadow(0 20px 30px rgba(184, 15, 84, 0.2)); margin-bottom: -250px;" />
+          
+          <!-- Table Image in Front -->
+          <img src="image/table.png" alt="Table" style="position: relative; z-index: 2; max-width: 120%; height: auto; max-height: 320px; filter: drop-shadow(0 15px 25px rgba(184, 15, 84, 0.3));" />
+        </div>
+
+        <!-- Hero Content -->
+
+        <div class="hero-content">
+          <div class="small-heading">✦ To My Special Person ✦</div>
+
+          <h1>
+            Happy
+            <span>Birthday</span>
+             <span>kitsa</span>
+            <b>♡</b>
+          </h1>
+
+          <p class="hero-description">
+            You make the world a brighter, kinder,
+            <br />
+            and more beautiful place just by being you!
+          </p>
+
+          <div class="hero-hearts">♥　♥　♥</div>
+
+          <button class="hug-btn" id="hugBtn">
+            <span>➤</span>
+            Send a Virtual Hug
+          </button>
+
+          <p class="tiny-text">Made with love, just for you ♥</p>
+        </div>
+      </section>
+
+      <!-- =========================================
+             GALLERY SECTION
+        ========================================== -->
+
+      <section class="gallery-section" id="gallery">
+        <div class="section-title">
+          <span>♥</span>
+          <h2>Beautiful Memories</h2>
+          <span>♥</span>
+        </div>
+        
+        <p class="gallery-text" style="margin: 0 auto 30px;">
+          Hover over the pictures to pause the memory and listen to our song!
+        </p>
+
+        <!-- Hidden Audio Element -->
+        <audio id="hoverAudio" src="your_song.mp3" preload="auto" loop></audio>
+
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <!-- Set 1 (10 cards) -->
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 1" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 2" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 3" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 4" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 5" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 6" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 7" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 8" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 9" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 10" /></div>
+            
+            <!-- Set 2 (Duplicate for infinite scrolling) -->
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 1" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 2" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 3" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 4" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 5" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 6" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 7" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 8" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 9" /></div>
+            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 10" /></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+             WISH CARDS
+        ========================================== -->
+
+      <section class="wishes-section" id="wishes">
+        <div class="wish-card">
+          <div class="wish-icon">🎂</div>
+
+          <h3>More Happiness</h3>
+
+          <p>May your days be filled with endless joy.</p>
+        </div>
+
+        <div class="wish-card">
+          <div class="wish-icon">♥</div>
+
+          <h3>Good Health</h3>
+
+          <p>May you always stay strong and smile.</p>
+        </div>
+
+        <div class="wish-card">
+          <div class="wish-icon">★</div>
+
+          <h3>Big Success</h3>
+
+          <p>May all your dreams turn into reality.</p>
+        </div>
+
+        <div class="wish-card">
+          <div class="wish-icon">🎁</div>
+
+          <h3>Lots of Love</h3>
+
+          <p>May you always be surrounded by love.</p>
+        </div>
+      </section>
+
+      <!-- =========================================
+             MESSAGE SECTION
+        ========================================== -->
+
+      <section class="message-section" id="message">
+        <div class="section-title">
+          <span>♥</span>
+
+          <h2>A Special Quote For You</h2>
+
+          <span>♥</span>
+        </div>
+
+        <div class="quote-box">
+          <div class="quote-mark">“</div>
+
+          <p>
+            On your special day, I just want to remind you how amazing you are.
+            <br />
+
+            You are kind, beautiful, strong, and loved more than you know.
+
+            <br />
+
+            May this year bring you happiness, success, and all the good things
+            you deserve.
+          </p>
+
+          <div class="quote-mark quote-end">”</div>
+        </div>
+
+        <div class="quote-author">— Always Believe in Yourself —</div>
+      </section>
+
+      <!-- =========================================
+             SURPRISE SECTION
+        ========================================== -->
+
+      <section class="surprise-section" id="surprise">
+        <div class="surprise-card">
+          <div class="surprise-glow"></div>
+
+          <div class="surprise-gift" id="surpriseGift">
+            <div class="envelope">
+              <div class="envelope-flap"></div>
+              <div class="envelope-body"></div>
+              <div class="envelope-heart">♥</div>
+            </div>
+          </div>
+
+          <h2>I Have A Little Surprise For You</h2>
+
+          <p>Because someone as special as you deserves something beautiful.</p>
+
+          <button class="surprise-btn" id="surpriseBtn">
+            🎁 Open Your Surprise
+          </button>
+        </div>
+      </section>
+
+      <!-- =========================================
+             FINAL MESSAGE
+        ========================================== -->
+
+      <section class="final-section">
+        <div class="final-heart">♥</div>
+
+        <h2>
+          Thank You For Being
+          <span>A Part Of My Life</span>
+        </h2>
+
+        <p>Keep smiling. Keep shining. And never forget how special you are.</p>
+
+        <div class="final-hearts">♥　♥　♥</div>
+      </section>
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+      <div class="footer-logo">♥ For You</div>
+
+      <p>Created with endless love & beautiful memories.</p>
+
+      <div class="footer-line"></div>
+
+      <small>  A Birthday Made With Love ♥ </small>
+    </footer>
+
+    <!-- =========================================
+         POPUP
+    ========================================== -->
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <button class="close-popup" id="closePopup">×</button>
+
+        <div class="popup-icon">💖</div>
+
+        <h2>You Are Truly Special!</h2>
+
+        <p>
+          No gift can ever describe how precious you are.
+
+          <br /><br />
+
+          May your smile stay forever, your dreams become reality, and your
+          heart always remain happy.
+
+          <br /><br />
+
+          <strong> Happy Birthday, Beautiful! ♥ </strong>
+        </p>
+
+        <div class="popup-hearts">♥ ♥ ♥ ♥ ♥</div>
+      </div>
+    </div>
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+      /* DOB Gate */
+      const dobOverlay = document.getElementById("dobOverlay");
+      const dobForm = document.getElementById("dobForm");
+      const codeBoxes = document.querySelectorAll(".code-box");
+      
+      // Auto focus next input
+      codeBoxes.forEach((box, index) => {
+        box.addEventListener("input", (e) => {
+          if (box.value.length === 1) {
+            if (index < codeBoxes.length - 1) {
+              codeBoxes[index + 1].focus();
+            } else {
+              // Last box filled, submit form
+              dobForm.dispatchEvent(new Event("submit"));
+            }
+          }
+        });
+        box.addEventListener("keydown", (e) => {
+          if (e.key === "Backspace" && box.value === "" && index > 0) {
+            codeBoxes[index - 1].focus();
+          }
+        });
+      });
+
+      dobForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        let codeVal = "";
+        codeBoxes.forEach(box => codeVal += box.value);
+        
+        const dobError = document.getElementById("dobError");
+        
+        // Let's accept if it matches DD=25, MM=09 (2509)
+        if(codeVal.startsWith("2509")) {
+          dobError.style.display = "none";
+          dobOverlay.classList.add("hidden");
+          document.body.style.overflowY = "auto";
+          createConfetti();
+          createHeartExplosion();
+        } else {
+          dobError.style.display = "block";
+          codeBoxes.forEach(box => box.value = "");
+          codeBoxes[0].focus();
+        }
+      });
+
+      /* Mobile Menu */
+
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show");
+
+        menuBtn.innerHTML = mobileMenu.classList.contains("show") ? "×" : "☰";
+      });
+
+      /* Close mobile menu after click */
+
+      document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("show");
+
+          menuBtn.innerHTML = "☰";
+        });
+      });
+
+      /* Virtual Hug */
+
+      const hugBtn = document.getElementById("hugBtn");
+
+      hugBtn.addEventListener("click", () => {
+        hugBtn.innerHTML = "♥ Hug Sent With Love!";
+
+        hugBtn.classList.add("hug-sent");
+
+        createHeartExplosion();
+
+        setTimeout(() => {
+          hugBtn.innerHTML = "<span>➤</span> Send a Virtual Hug";
+
+          hugBtn.classList.remove("hug-sent");
+        }, 3000);
+      });
+
+      /* Surprise Popup */
+
+      const surpriseBtn = document.getElementById("surpriseBtn");
+
+      const popup = document.getElementById("popup");
+
+      const closePopup = document.getElementById("closePopup");
+
+      surpriseBtn.addEventListener("click", () => {
+        popup.classList.add("active");
+
+        createHeartExplosion();
+      });
+
+      closePopup.addEventListener("click", () => {
+        popup.classList.remove("active");
+      });
+
+      popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+          popup.classList.remove("active");
+        }
+      });
+
+      /* Heart Explosion */
+
+      function createHeartExplosion() {
+        const hearts = ["♥", "♡", "💗", "💖", "💕"];
+
+        for (let i = 0; i < 25; i++) {
+          const heart = document.createElement("span");
+
+          heart.className = "explosion-heart";
+
+          heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+          heart.style.left = Math.random() * 100 + "vw";
+
+          heart.style.top = Math.random() * 100 + "vh";
+
+          heart.style.animationDelay = Math.random() * 0.5 + "s";
+
+          heart.style.fontSize = 15 + Math.random() * 25 + "px";
+
+          document.body.appendChild(heart);
+
+          setTimeout(() => {
+            heart.remove();
+          }, 2500);
+        }
+      }
+
+      /* Mouse Parallax Effect */
+
+      const heroVisual = document.querySelector(".hero-visual");
+
+      document.addEventListener("mousemove", (e) => {
+        if (window.innerWidth < 768) return;
+
+        const x = (window.innerWidth / 2 - e.clientX) / 60;
+
+        const y = (window.innerHeight / 2 - e.clientY) / 60;
+
+        heroVisual.style.transform = `translate(${x}px, ${y}px)`;
+      });
+
+      /* Scroll Reveal */
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+        },
+      );
+
+      document
+        .querySelectorAll(
+          ".wish-card, .quote-box, .surprise-card, .final-section",
+        )
+        .forEach((element) => {
+          observer.observe(element);
+        });
+
+      /* Random Sparkle Position */
+
+      document.querySelectorAll(".sparkles i").forEach((sparkle) => {
+        sparkle.style.left = Math.random() * 100 + "%";
+
+        sparkle.style.top = Math.random() * 100 + "%";
+
+        sparkle.style.animationDelay = Math.random() * 4 + "s";
+      });
+
+      /* Confetti Celebration */
+      function createConfetti() {
+        const colors = ['#ff337a', '#ff9ac0', '#ffd7e5', '#ff5c93', '#fff'];
+        for (let i = 0; i < 150; i++) {
+          const confetti = document.createElement('div');
+          confetti.className = 'confetti';
+          confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.left = Math.random() * 100 + 'vw';
+          confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+          confetti.style.animationDelay = Math.random() * 1.5 + 's';
+          document.body.appendChild(confetti);
+
+          setTimeout(() => {
+            confetti.remove();
+          }, 6000);
+        }
+      }
+      /* Hover Audio for Gallery */
+      const hoverAudio = document.getElementById("hoverAudio");
+      const carouselTrack = document.querySelector(".carousel-track");
+
+      if (carouselTrack && hoverAudio) {
+        carouselTrack.addEventListener("mouseenter", () => {
+          hoverAudio.play().catch((err) => {
+            console.log("Audio playback was prevented by browser auto-play policy.", err);
+          });
+        });
+
+        carouselTrack.addEventListener("mouseleave", () => {
+          hoverAudio.pause();
+        });
+      }
+    </script>
+  </body>
+</html>
