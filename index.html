@@ -45,6 +45,8 @@
         <form id="dobForm" class="code-inputs">
           <input
             type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
             maxlength="1"
             class="code-box"
             required
@@ -52,6 +54,8 @@
           />
           <input
             type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
             maxlength="1"
             class="code-box"
             required
@@ -59,6 +63,8 @@
           />
           <input
             type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
             maxlength="1"
             class="code-box"
             required
@@ -66,6 +72,8 @@
           />
           <input
             type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
             maxlength="1"
             class="code-box"
             required
@@ -73,6 +81,8 @@
           />
           <input
             type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
             maxlength="1"
             class="code-box"
             required
@@ -80,6 +90,8 @@
           />
           <input
             type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
             maxlength="1"
             class="code-box"
             required
@@ -87,6 +99,8 @@
           />
           <input
             type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
             maxlength="1"
             class="code-box"
             required
@@ -94,6 +108,8 @@
           />
           <input
             type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
             maxlength="1"
             class="code-box"
             required
@@ -218,7 +234,9 @@
         <!-- Hero Content -->
 
         <div class="hero-content">
-          <div class="small-heading">✦ To My Special Person ✦</div>
+          <div class="small-heading">
+            ✦ wish you a many many happy returns of the day ✦
+          </div>
 
           <h1>
             Happy
@@ -234,13 +252,6 @@
           </p>
 
           <div class="hero-hearts">♥　♥　♥</div>
-
-          <button class="hug-btn" id="hugBtn">
-            <span>➤</span>
-            Send a Virtual Hug
-          </button>
-
-          <p class="tiny-text">Made with love, just for you ♥</p>
         </div>
       </section>
 
@@ -269,20 +280,29 @@
         <div class="carousel-container" id="carouselContainer">
           <div class="carousel-track" id="carouselTrack">
             <!-- Set 1 (10 cards) -->
-            <div class="carousel-card" data-audio="image/chal bete dariya kinare.mp3">
+            <div
+              class="carousel-card"
+              data-audio="image/chal bete dariya kinare.mp3"
+            >
               <img src="image/k1.jpeg" alt="Memory 1" />
             </div>
             <div class="carousel-card" data-audio="image/dekhu tuje.mp3">
               <img src="image/k2.jpeg" alt="Memory 2" />
             </div>
-            <div class="carousel-card" data-audio="image/hajaro dafa aap se.mp3">
+            <div
+              class="carousel-card"
+              data-audio="image/hajaro dafa aap se.mp3"
+            >
               <img
                 src="image/k3.jpeg"
                 alt="Memory 3"
                 style="object-position: top"
               />
             </div>
-            <div class="carousel-card" data-audio="image/misrisi mithi bate.mp3">
+            <div
+              class="carousel-card"
+              data-audio="image/misrisi mithi bate.mp3"
+            >
               <img
                 src="image/k4.jpeg"
                 alt="Memory 4"
@@ -307,9 +327,6 @@
             </div>
             <div class="carousel-card" data-audio="image/teri meri galna.mp3">
               <img src="image/k9.jpeg" alt="Memory 9" />
-            </div>
-            <div class="carousel-card" data-audio="image/tum par marta hu.mp3">
-              <img src="special_birthday_moment.jpg" alt="Memory 10" />
             </div>
           </div>
         </div>
@@ -566,24 +583,6 @@
         });
       });
 
-      /* Virtual Hug */
-
-      const hugBtn = document.getElementById("hugBtn");
-
-      hugBtn.addEventListener("click", () => {
-        hugBtn.innerHTML = "♥ Hug Sent With Love!";
-
-        hugBtn.classList.add("hug-sent");
-
-        createHeartExplosion();
-
-        setTimeout(() => {
-          hugBtn.innerHTML = "<span>➤</span> Send a Virtual Hug";
-
-          hugBtn.classList.remove("hug-sent");
-        }, 3000);
-      });
-
       /* Surprise Popup */
 
       const surpriseBtn = document.getElementById("surpriseBtn");
@@ -774,18 +773,22 @@
       const carouselCards = document.querySelectorAll(".carousel-card");
       let activeCard = null;
 
+      let currentSongSrc = null;
+
       if (carouselCards.length > 0 && hoverAudio) {
         carouselCards.forEach((card) => {
-          
           const playCardAudio = () => {
             const songSrc = card.getAttribute("data-audio");
             if (songSrc) {
-              // Only change src if it's different to avoid reloading
-              if (!hoverAudio.src.endsWith(songSrc)) {
+              if (currentSongSrc !== songSrc) {
                 hoverAudio.src = songSrc;
+                currentSongSrc = songSrc;
               }
               hoverAudio.play().catch((err) => {
-                console.log("Audio playback prevented by auto-play policy.", err);
+                console.log(
+                  "Audio playback prevented by auto-play policy.",
+                  err,
+                );
               });
               activeCard = card;
             }
@@ -797,19 +800,7 @@
             activeCard = null;
           };
 
-          // Desktop
-          card.addEventListener("pointerenter", (e) => {
-            if (e.pointerType === "mouse") {
-              playCardAudio();
-            }
-          });
-          card.addEventListener("pointerleave", (e) => {
-            if (e.pointerType === "mouse") {
-              stopCardAudio();
-            }
-          });
-
-          // Mobile
+          // Play on Click/Tap for all devices
           card.addEventListener("click", (e) => {
             if (activeCard === card && !hoverAudio.paused) {
               stopCardAudio();
@@ -828,11 +819,11 @@
 
       if (prevBtn && nextBtn && carouselContainer) {
         prevBtn.addEventListener("click", () => {
-          carouselContainer.scrollBy({ left: -300, behavior: "smooth" });
+          carouselContainer.scrollLeft -= 300;
         });
 
         nextBtn.addEventListener("click", () => {
-          carouselContainer.scrollBy({ left: 300, behavior: "smooth" });
+          carouselContainer.scrollLeft += 300;
         });
       }
 

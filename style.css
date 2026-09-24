@@ -2520,7 +2520,7 @@ footer small {
   background: var(--pink-dark);
 }
 
-.carousel-container {
+.carousel-container { scroll-behavior: smooth;
   overflow-x: auto;
   width: 100%;
   padding: 40px 20px;
