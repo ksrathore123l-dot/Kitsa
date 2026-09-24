@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="overflow-y: hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Happy Birthday ❤️ | For My Special Person</title>
+    <title>Happy Birthday Kitsa❤️</title>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -17,30 +17,95 @@
     />
   </head>
 
-  <body style="overflow-y: hidden;">
+  <body style="overflow-y: hidden">
     <!-- =========================================
          DOB GATE
     ========================================== -->
     <div class="dob-overlay" id="dobOverlay">
       <div class="dob-card">
         <div class="lock-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
         </div>
-        <h2 class="dob-title">Happy Birthday</h2>
-        <p class="dob-subtitle">to my favourite person <span class="heart-icon">❤️</span></p>
+        <h2 class="dob-title">your surprise</h2>
+        <p class="dob-subtitle">
+          <span class="heart-icon">❤️</span>
+        </p>
         <p class="dob-instruction">ENTER YOUR BIRTH DATE</p>
-        
+
         <form id="dobForm" class="code-inputs">
-          <input type="text" maxlength="1" class="code-box" required placeholder="D" />
-          <input type="text" maxlength="1" class="code-box" required placeholder="D" />
-          <input type="text" maxlength="1" class="code-box" required placeholder="M"/>
-          <input type="text" maxlength="1" class="code-box" required placeholder="M"/>
-          <input type="text" maxlength="1" class="code-box" required placeholder="Y"/>
-          <input type="text" maxlength="1" class="code-box" required placeholder="Y"/>
-          <input type="text" maxlength="1" class="code-box" required placeholder="Y"/>
-          <input type="text" maxlength="1" class="code-box" required placeholder="Y"/>
+          <input
+            type="text"
+            maxlength="1"
+            class="code-box"
+            required
+            placeholder="D"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="code-box"
+            required
+            placeholder="D"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="code-box"
+            required
+            placeholder="M"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="code-box"
+            required
+            placeholder="M"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="code-box"
+            required
+            placeholder="Y"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="code-box"
+            required
+            placeholder="Y"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="code-box"
+            required
+            placeholder="Y"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="code-box"
+            required
+            placeholder="Y"
+          />
         </form>
-        <p id="dobError" style="color: red; font-size: 14px; display: none; margin-top: 10px;">Incorrect date! Try again.</p>
+        <p
+          id="dobError"
+          style="color: red; font-size: 14px; display: none; margin-top: 10px"
+        >
+          Incorrect date! Try again.
+        </p>
 
         <div class="dob-decorations">
           <span>♥</span><span class="star">✦</span><span>♥</span>
@@ -135,12 +200,19 @@
 
         <!-- Left Character / Cake Area -->
 
-        <div class="hero-visual" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 600px;">
+        <div class="hero-visual">
           <!-- Main Character Image -->
-          <img src="image/kitsa.png" alt="Cute character" style="position: relative; z-index: 1; max-width: 100%; height: auto; max-height: 450px; animation: floatImage 6s ease-in-out infinite; filter: drop-shadow(0 20px 30px rgba(184, 15, 84, 0.2)); margin-bottom: -250px;" />
-          
+          <img
+            src="image/kitsa.png"
+            alt="Cute character"
+            class="hero-character"
+          />
+
           <!-- Table Image in Front -->
-          <img src="image/table.png" alt="Table" style="position: relative; z-index: 2; max-width: 120%; height: auto; max-height: 320px; filter: drop-shadow(0 15px 25px rgba(184, 15, 84, 0.3));" />
+          <img src="image/table.png" alt="Table" class="hero-table" />
+
+          <!-- Cake Image on Table -->
+          <img src="image/cake-k.png" alt="Birthday Cake" class="hero-cake" />
         </div>
 
         <!-- Hero Content -->
@@ -151,7 +223,7 @@
           <h1>
             Happy
             <span>Birthday</span>
-             <span>kitsa</span>
+            <span>kitsa</span>
             <b>♡</b>
           </h1>
 
@@ -175,46 +247,70 @@
       <!-- =========================================
              GALLERY SECTION
         ========================================== -->
-
       <section class="gallery-section" id="gallery">
         <div class="section-title">
           <span>♥</span>
           <h2>Beautiful Memories</h2>
           <span>♥</span>
         </div>
-        
-        <p class="gallery-text" style="margin: 0 auto 30px;">
+
+        <p class="gallery-text" style="margin: 0 auto 30px">
           Hover over the pictures to pause the memory and listen to our song!
         </p>
 
         <!-- Hidden Audio Element -->
         <audio id="hoverAudio" src="your_song.mp3" preload="auto" loop></audio>
 
-        <div class="carousel-container">
-          <div class="carousel-track">
+        <div class="carousel-controls">
+          <button class="nav-btn" id="prevBtn">❮</button>
+          <button class="nav-btn" id="nextBtn">❯</button>
+        </div>
+
+        <div class="carousel-container" id="carouselContainer">
+          <div class="carousel-track" id="carouselTrack">
             <!-- Set 1 (10 cards) -->
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 1" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 2" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 3" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 4" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 5" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 6" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 7" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 8" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 9" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 10" /></div>
-            
-            <!-- Set 2 (Duplicate for infinite scrolling) -->
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 1" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 2" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 3" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 4" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 5" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 6" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 7" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 8" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 9" /></div>
-            <div class="carousel-card"><img src="special_birthday_moment.jpg" alt="Memory 10" /></div>
+            <div class="carousel-card" data-audio="image/chal bete dariya kinare.mp3">
+              <img src="image/k1.jpeg" alt="Memory 1" />
+            </div>
+            <div class="carousel-card" data-audio="image/dekhu tuje.mp3">
+              <img src="image/k2.jpeg" alt="Memory 2" />
+            </div>
+            <div class="carousel-card" data-audio="image/hajaro dafa aap se.mp3">
+              <img
+                src="image/k3.jpeg"
+                alt="Memory 3"
+                style="object-position: top"
+              />
+            </div>
+            <div class="carousel-card" data-audio="image/misrisi mithi bate.mp3">
+              <img
+                src="image/k4.jpeg"
+                alt="Memory 4"
+                style="object-position: top"
+              />
+            </div>
+            <div class="carousel-card" data-audio="image/kala tika.mp3">
+              <img src="image/k5.jpeg" alt="Memory 5" />
+            </div>
+            <div class="carousel-card" data-audio="image/sar aakho par ye.mp3">
+              <img src="image/k6.jpeg" alt="Memory 6" />
+            </div>
+            <div class="carousel-card" data-audio="image/sara din ye accha.mp3">
+              <img
+                src="image/k7.jpeg"
+                alt="Memory 7"
+                style="object-position: top"
+              />
+            </div>
+            <div class="carousel-card" data-audio="image/tera didar huaa.mp3">
+              <img src="image/k8.jpeg" alt="Memory 8" />
+            </div>
+            <div class="carousel-card" data-audio="image/teri meri galna.mp3">
+              <img src="image/k9.jpeg" alt="Memory 9" />
+            </div>
+            <div class="carousel-card" data-audio="image/tum par marta hu.mp3">
+              <img src="special_birthday_moment.jpg" alt="Memory 10" />
+            </div>
           </div>
         </div>
       </section>
@@ -300,10 +396,11 @@
           <div class="surprise-glow"></div>
 
           <div class="surprise-gift" id="surpriseGift">
-            <div class="envelope">
-              <div class="envelope-flap"></div>
+            <div class="envelope" id="envelope">
+              <div class="envelope-flap" id="envelopeFlap"></div>
+              <div class="envelope-card">special wishes</div>
               <div class="envelope-body"></div>
-              <div class="envelope-heart">♥</div>
+              <div class="envelope-heart" id="envelopeHeart">♥</div>
             </div>
           </div>
 
@@ -343,10 +440,6 @@
       <div class="footer-logo">♥ For You</div>
 
       <p>Created with endless love & beautiful memories.</p>
-
-      <div class="footer-line"></div>
-
-      <small>  A Birthday Made With Love ♥ </small>
     </footer>
 
     <!-- =========================================
@@ -359,19 +452,41 @@
 
         <div class="popup-icon">💖</div>
 
-        <h2>You Are Truly Special!</h2>
+        <h2>Happy Birthday Kitsa ❤️</h2>
 
-        <p>
-          No gift can ever describe how precious you are.
-
+        <p style="text-align: left; font-size: 15px">
+          I silently care about more than you’ll ever know. 💖
           <br /><br />
-
-          May your smile stay forever, your dreams become reality, and your
-          heart always remain happy.
-
+          Maybe I was never meant to be a part of your story the way I always
+          wished I could be… but honestly, you’ll always have a special place in
+          mine. I never expected anything from you—not even the same feelings. I
+          just wanted you to be happy. Because sometimes, loving someone means
+          wanting the best for them, even if you have to love them from a
+          distance.
           <br /><br />
-
-          <strong> Happy Birthday, Beautiful! ♥ </strong>
+          Today, on your birthday, I just want to pray that life gives you
+          everything you deserve—endless happiness, beautiful moments, success,
+          and someone who loves you as deeply as I secretly do. ✨
+          <br /><br />
+          I’ll probably never tell you how many times your smile has made my day
+          better, or how many times I’ve wished that someday, maybe, you would
+          look at me the way I’ve always looked at you.
+          <br /><br />
+          There are so many things I’ve felt but never had the courage to say.
+          Maybe I’ll always keep some of them to myself… because I don’t want my
+          feelings to ever become a reason for you to feel uncomfortable.
+          <br /><br />
+          “The saddest kind of love is loving someone with your whole heart
+          while knowing you may never have a place in theirs.” 💖🩹
+          <br /><br />
+          <strong>Happy Birthday kitsa.🎂💖</strong>
+          <br /><br />
+          I genuinely hope your smile always stays brighter than all the
+          feelings I’ve kept hidden.
+          <br /><br />
+          And maybe you’ll never know how much you meant to me… but I’ll always
+          be grateful that, at least for a while, I got to care about someone as
+          special as you. 💖
         </p>
 
         <div class="popup-hearts">♥ ♥ ♥ ♥ ♥</div>
@@ -387,7 +502,7 @@
       const dobOverlay = document.getElementById("dobOverlay");
       const dobForm = document.getElementById("dobForm");
       const codeBoxes = document.querySelectorAll(".code-box");
-      
+
       // Auto focus next input
       codeBoxes.forEach((box, index) => {
         box.addEventListener("input", (e) => {
@@ -409,22 +524,23 @@
 
       dobForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        
+
         let codeVal = "";
-        codeBoxes.forEach(box => codeVal += box.value);
-        
+        codeBoxes.forEach((box) => (codeVal += box.value));
+
         const dobError = document.getElementById("dobError");
-        
-        // Let's accept if it matches DD=25, MM=09 (2509)
-        if(codeVal.startsWith("2509")) {
+
+        if (codeVal.startsWith("2509")) {
           dobError.style.display = "none";
           dobOverlay.classList.add("hidden");
-          document.body.style.overflowY = "auto";
+          document.documentElement.style.overflowY = "";
+          document.body.style.overflowY = "";
           createConfetti();
           createHeartExplosion();
+          createFlowerShower();
         } else {
           dobError.style.display = "block";
-          codeBoxes.forEach(box => box.value = "");
+          codeBoxes.forEach((box) => (box.value = ""));
           codeBoxes[0].focus();
         }
       });
@@ -477,9 +593,13 @@
       const closePopup = document.getElementById("closePopup");
 
       surpriseBtn.addEventListener("click", () => {
-        popup.classList.add("active");
+        const envelope = document.getElementById("envelope");
+        envelope.classList.add("open");
 
-        createHeartExplosion();
+        setTimeout(() => {
+          popup.classList.add("active");
+          createHeartExplosion();
+        }, 1200);
       });
 
       closePopup.addEventListener("click", () => {
@@ -569,14 +689,15 @@
 
       /* Confetti Celebration */
       function createConfetti() {
-        const colors = ['#ff337a', '#ff9ac0', '#ffd7e5', '#ff5c93', '#fff'];
+        const colors = ["#ff337a", "#ff9ac0", "#ffd7e5", "#ff5c93", "#fff"];
         for (let i = 0; i < 150; i++) {
-          const confetti = document.createElement('div');
-          confetti.className = 'confetti';
-          confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-          confetti.style.left = Math.random() * 100 + 'vw';
-          confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
-          confetti.style.animationDelay = Math.random() * 1.5 + 's';
+          const confetti = document.createElement("div");
+          confetti.className = "confetti";
+          confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.left = Math.random() * 100 + "vw";
+          confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
+          confetti.style.animationDelay = Math.random() * 1.5 + "s";
           document.body.appendChild(confetti);
 
           setTimeout(() => {
@@ -584,21 +705,146 @@
           }, 6000);
         }
       }
+
+      /* Flower Shower */
+      function createFlowerShower() {
+        const flowers = ["🌸", "🌺", "🌷", "🌹", "🏵️", "🌻", "🌼"];
+        for (let i = 0; i < 60; i++) {
+          const flower = document.createElement("div");
+          flower.innerHTML =
+            flowers[Math.floor(Math.random() * flowers.length)];
+          flower.style.position = "fixed";
+          flower.style.top = "-10vh";
+          flower.style.left = Math.random() * 100 + "vw";
+          flower.style.fontSize = Math.random() * 20 + 15 + "px";
+          flower.style.zIndex = "9999";
+          flower.style.pointerEvents = "none";
+          flower.style.animation = `fallDown ${Math.random() * 4 + 3}s linear forwards`;
+          flower.style.animationDelay = Math.random() * 2 + "s";
+          document.body.appendChild(flower);
+
+          setTimeout(() => {
+            flower.remove();
+          }, 7000);
+        }
+      }
+
+      /* Fire Celebration (Fireworks left and right) */
+      function createFireworks() {
+        const createBurst = (side) => {
+          for (let i = 0; i < 30; i++) {
+            const spark = document.createElement("div");
+            spark.innerHTML = "✨";
+            spark.style.position = "fixed";
+            spark.style.bottom = "20vh";
+            spark.style.left =
+              side === "left"
+                ? 10 + Math.random() * 10 + "vw"
+                : 80 + Math.random() * 10 + "vw";
+            spark.style.fontSize = Math.random() * 15 + 10 + "px";
+            spark.style.zIndex = "9998";
+            spark.style.pointerEvents = "none";
+
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = 50 + Math.random() * 150;
+            const tx = Math.cos(angle) * velocity;
+            const ty = Math.sin(angle) * velocity - 100; // slightly upward
+
+            spark.style.setProperty("--tx", `${tx}px`);
+            spark.style.setProperty("--ty", `${ty}px`);
+            spark.style.animation = `fireworkBurst 1.5s ease-out forwards`;
+            spark.style.animationDelay = Math.random() * 0.5 + "s";
+
+            document.body.appendChild(spark);
+            setTimeout(() => spark.remove(), 2000);
+          }
+        };
+
+        // Create bursts over a few seconds
+        let bursts = 0;
+        const interval = setInterval(() => {
+          createBurst("left");
+          createBurst("right");
+          bursts++;
+          if (bursts > 3) clearInterval(interval);
+        }, 800);
+      }
       /* Hover Audio for Gallery */
       const hoverAudio = document.getElementById("hoverAudio");
-      const carouselTrack = document.querySelector(".carousel-track");
+      const carouselCards = document.querySelectorAll(".carousel-card");
+      let activeCard = null;
 
-      if (carouselTrack && hoverAudio) {
-        carouselTrack.addEventListener("mouseenter", () => {
-          hoverAudio.play().catch((err) => {
-            console.log("Audio playback was prevented by browser auto-play policy.", err);
+      if (carouselCards.length > 0 && hoverAudio) {
+        carouselCards.forEach((card) => {
+          
+          const playCardAudio = () => {
+            const songSrc = card.getAttribute("data-audio");
+            if (songSrc) {
+              // Only change src if it's different to avoid reloading
+              if (!hoverAudio.src.endsWith(songSrc)) {
+                hoverAudio.src = songSrc;
+              }
+              hoverAudio.play().catch((err) => {
+                console.log("Audio playback prevented by auto-play policy.", err);
+              });
+              activeCard = card;
+            }
+          };
+
+          const stopCardAudio = () => {
+            hoverAudio.pause();
+            hoverAudio.currentTime = 0;
+            activeCard = null;
+          };
+
+          // Desktop
+          card.addEventListener("pointerenter", (e) => {
+            if (e.pointerType === "mouse") {
+              playCardAudio();
+            }
+          });
+          card.addEventListener("pointerleave", (e) => {
+            if (e.pointerType === "mouse") {
+              stopCardAudio();
+            }
+          });
+
+          // Mobile
+          card.addEventListener("click", (e) => {
+            if (activeCard === card && !hoverAudio.paused) {
+              stopCardAudio();
+            } else {
+              playCardAudio();
+            }
           });
         });
+      }
 
-        carouselTrack.addEventListener("mouseleave", () => {
-          hoverAudio.pause();
+      /* Carousel Navigation */
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const carouselContainer = document.getElementById("carouselContainer");
+      const gallerySection = document.getElementById("gallery");
+
+      if (prevBtn && nextBtn && carouselContainer) {
+        prevBtn.addEventListener("click", () => {
+          carouselContainer.scrollBy({ left: -300, behavior: "smooth" });
+        });
+
+        nextBtn.addEventListener("click", () => {
+          carouselContainer.scrollBy({ left: 300, behavior: "smooth" });
         });
       }
+
+      /* Sticky Scroll JS Removed */
+
+      /* Wish Card Celebration */
+      document.querySelectorAll(".wish-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          createConfetti();
+          createHeartExplosion();
+        });
+      });
     </script>
   </body>
 </html>
